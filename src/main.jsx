@@ -4,7 +4,6 @@ import About from './components/About.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import Achievements from './components/Achievements'
-import Education from './components/Education'
 import './index.css'
 import {
   createBrowserRouter,
@@ -14,31 +13,27 @@ import Landing from './components/Landing.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing/>,
+    element: <Landing />,
   },
   {
     path: '/Achievements',
-    element: <Achievements/>
+    element: <Achievements />
   },
   {
     path: "/About",
-    element: <About/>,
+    element: <About />,
   },
   {
-    path:"/Contacts",
-    element: <Contact/>,
+    path: "/Contacts",
+    element: <Contact />,
   },
   {
-    path:"/Projects",
-    element: <Projects/>,
-  },
-  {
-    path: '/Education',
-    element: <Education/>
+    path: "/Projects",
+    element: <Projects />,
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
