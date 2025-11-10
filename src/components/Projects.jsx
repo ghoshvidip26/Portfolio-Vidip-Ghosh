@@ -5,7 +5,7 @@ import Ideator from '../assets/Ideator.png';
 import GitCollabX from '../assets/GitCollabX.png';
 import PurrfectPal from '../assets/PurrfectPal.png';
 import PlanetCare from '../assets/PlanetCare.png';
-import ZkEmployeeLoan from '../assets/zkEmployeeLoan.png';
+import ZkEmployeeLoan from '../assets/zKEmployeeLoan.png';
 import TrezoCoreHH from '../assets/Trezo.png';
 import Connectify from '../assets/Connectify.png';
 
