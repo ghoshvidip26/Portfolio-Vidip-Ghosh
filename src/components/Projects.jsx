@@ -1,70 +1,92 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { useState } from 'react';
-
-// Project images
 import Ideator from '../assets/Ideator.png';
 import GitCollabX from '../assets/GitCollabX.png';
-import FloodGuardia from '../assets/FloodGuardia.png';
 import PurrfectPal from '../assets/PurrfectPal.png';
 import PlanetCare from '../assets/PlanetCare.png';
+import ZkEmployeeLoan from '../assets/zkEmployeeLoan.png';
+import TrezoCoreHH from '../assets/Trezo.png';
+import Connectify from '../assets/Connectify.png';
 
 const projects = [
   {
     id: 1,
     title: 'Ideator',
     description: 'A platform for sharing and brainstorming ideas with a community of innovators and creators.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    tags: ['React', 'Django', 'PostgreSQL', 'OpenAI API'],
     image: Ideator,
     github: 'https://github.com/Vidip-Ghosh/Ideator',
     demo: '#',
-    featured: true
   },
   {
     id: 2,
     title: 'GitCollabX',
     description: 'Collaborative platform for developers to work together on Git projects with enhanced team features.',
-    tags: ['React', 'Git API', 'Tailwind CSS', 'Firebase'],
+    tags: ['React', 'Github-Octokit'],
     image: GitCollabX,
     github: 'https://github.com/Vidip-Ghosh/GitCollabX',
     demo: '#',
-    featured: true
   },
   {
     id: 3,
-    title: 'FloodGuardia',
-    description: 'An early warning system for flood prediction and community safety measures.',
-    tags: ['Python', 'Machine Learning', 'Flask', 'OpenCV'],
-    image: FloodGuardia,
-    github: 'https://github.com/Vidip-Ghosh/FloodGuardia',
+    title: 'Connectify',
+    description: 'Connectify is a robust web platform designed to enhance networking and collaboration within the tech community. It offers features ranging from professional profile management to project collaboration and tech event updates.',
+    tags: ['Firebase', 'Firebase Auth', 'Gemini API', 'Python', 'React JS'],
+    image: Connectify,
+    github: 'https://github.com/ghoshvidip26/Connectify-Hack-Your-Portfolio.git',
     demo: '#',
-    featured: true
   },
   {
     id: 4,
     title: 'PurrfectPal',
     description: 'Bridging the gap between pet owners and temporary caregivers for pets.',
-    tags: ['React Native', 'Firebase', 'Redux', 'Node.js'],
+    tags: ['React JS', 'PostgreSQL', 'Django', 'Java', 'Sentiment Analysis'],
     image: PurrfectPal,
     github: 'https://github.com/Vidip-Ghosh/PurrfectPal',
     demo: '#',
-    featured: true
   },
   {
     id: 5,
     title: 'PlanetCare',
     description: 'Promoting environmental sustainability through community engagement and education.',
-    tags: ['Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js'],
+    tags: ['React', 'Django', 'OpenAi', 'PostgreSQL'],
     image: PlanetCare,
     github: 'https://github.com/Vidip-Ghosh/HackOdisha',
     demo: '#',
-    featured: false
+  },
+  {
+    id: 6,
+    title: 'zkEmployeeLoan',
+    description: 'A privacy-preserving employee loan system built using zero-knowledge proofs and blockchain smart contracts. It allows verified employees to apply for loans based on their employment and salary data, without revealing sensitive information on-chain.',
+    tags: ['TypeScript', 'Noir', 'MongoDB', 'NextJs'],
+    image: ZkEmployeeLoan,
+    github: 'https://github.com/ghoshvidip26/zkEmployeeLoan',
+    demo: '#',
+  },
+  {
+    id: 7,
+    title: 'SplitMate',
+    description: 'A modern, blockchain-powered expense sharing app with real-time chat integration and AI-powered insights.',
+    tags: ['TypeScript', 'Base L2', 'MongoDB', 'NextJs', 'Coinbase Wallet SDK', 'XMTP Protocol'],
+    image: ZkEmployeeLoan,
+    github: "https://github.com/ghoshvidip26/SplitMate.git",
+    demo: '#',
+  },
+  {
+    id: 8,
+    title: 'Trezo',
+    description: 'Trezo is a decentralized lending platform that enables users to deposit BTC as collateral and borrow USDT against it. The platform ensures secure lending with a well-defined collateralization and liquidation mechanism.',
+    tags: ['TypeScript', 'Core', 'NextJs', 'Web3.js', 'Solidity'],
+    image: TrezoCoreHH,
+    github: "https://github.com/ghoshvidip26/TrezoCoreHH.git",
+    demo: '#',
   }
 ];
 
 const ProjectCard = ({ project, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -95,17 +117,17 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </div>
       </div>
-      
+
       {/* Project Content */}
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex gap-2">
-            <a 
-              href={project.github} 
-              target="_blank" 
+            <a
+              href={project.github}
+              target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               aria-label="GitHub Repository"
@@ -113,9 +135,9 @@ const ProjectCard = ({ project, index }) => {
               <FiGithub className="w-5 h-5" />
             </a>
             {project.demo && (
-              <a 
-                href={project.demo} 
-                target="_blank" 
+              <a
+                href={project.demo}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                 aria-label="Live Demo"
@@ -124,9 +146,6 @@ const ProjectCard = ({ project, index }) => {
               </a>
             )}
           </div>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
-            {project.featured ? '⭐ Featured' : 'Project'}
-          </span>
         </div>
       </div>
     </motion.div>
@@ -135,14 +154,14 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  
+
   const filters = ['All', 'Web', 'Mobile', 'ML/AI', 'Featured'];
-  
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : activeFilter === 'Featured'
-    ? projects.filter(project => project.featured)
-    : projects.filter(project => project.tags.some(tag => 
+      ? projects.filter(project => project.featured)
+      : projects.filter(project => project.tags.some(tag =>
         tag.toLowerCase().includes(activeFilter.toLowerCase())
       ));
 
@@ -161,18 +180,17 @@ const Projects = () => {
             My <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
-          
+
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeFilter === filter
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  }`}
               >
                 {filter}
               </button>
