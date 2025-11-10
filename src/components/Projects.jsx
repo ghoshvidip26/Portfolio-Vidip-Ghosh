@@ -93,7 +93,7 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative group overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-300"
+      className="relative group overflow-hidden rounded-2xl bg-white dark:bg-gray-900 shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-900/10 dark:border-purple-500/20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -109,7 +109,7 @@ const ProjectCard = ({ project, index }) => {
             <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tags.map((tag, i) => (
-                <span key={i} className="text-xs bg-white/20 text-white px-2 py-1 rounded-full">
+                <span key={i} className="text-xs bg-purple-500/20 text-purple-100 px-2 py-1 rounded-full border border-purple-400/20">
                   {tag}
                 </span>
               ))}
@@ -129,7 +129,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+              className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded-full text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-800/50 transition-colors border border-purple-100 dark:border-purple-900/50"
               aria-label="GitHub Repository"
             >
               <FiGithub className="w-5 h-5" />
@@ -139,7 +139,7 @@ const ProjectCard = ({ project, index }) => {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="p-2 bg-purple-50 dark:bg-purple-900/30 rounded-full text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-800/50 transition-colors border border-purple-100 dark:border-purple-900/50"
                 aria-label="Live Demo"
               >
                 <FiExternalLink className="w-5 h-5" />
@@ -166,7 +166,7 @@ const Projects = () => {
       ));
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-purple-50/30 dark:from-gray-900 dark:to-purple-900/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -176,10 +176,10 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-blue-600 dark:text-blue-400">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-900 to-blue-700 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent mb-4">
+            My Projects
           </h2>
-          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-8"></div>
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -188,8 +188,8 @@ const Projects = () => {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-md shadow-purple-500/20'
+                  : 'bg-white/80 dark:bg-gray-800/80 text-purple-900 dark:text-purple-200 hover:bg-purple-50/80 dark:hover:bg-gray-800/90 backdrop-blur-sm'
                   }`}
               >
                 {filter}

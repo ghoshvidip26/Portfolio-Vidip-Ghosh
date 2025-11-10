@@ -39,8 +39,8 @@ const Header = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md py-2'
-          : 'bg-transparent py-4'
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md py-2 border-b border-purple-100/30 dark:border-purple-900/30'
+          : 'bg-gradient-to-b from-white/90 to-transparent dark:from-gray-900/90 py-4'
       }`}
     >
       <div className="container mx-auto px-6">
@@ -50,7 +50,7 @@ const Header = () => {
             to="hero"
             smooth={true}
             duration={500}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 cursor-pointer"
+            className="text-2xl font-bold bg-gradient-to-r from-purple-800 to-blue-700 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-400 cursor-pointer"
           >
             Vidip Ghosh
           </Link>
@@ -63,8 +63,8 @@ const Header = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors cursor-pointer"
-                activeClass="text-blue-600 dark:text-blue-400 font-semibold"
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-700 dark:hover:text-purple-400 font-medium transition-colors cursor-pointer"
+                activeClass="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 font-semibold"
                 spy={true}
                 offset={-80}
               >
@@ -74,7 +74,7 @@ const Header = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors border border-purple-100 dark:border-purple-900/30"
               aria-label="Toggle dark mode"
             >
               {darkMode ? (
@@ -115,7 +115,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed inset-0 bg-white dark:bg-gray-900 z-40 transform ${
+        className={`md:hidden fixed inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm z-40 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 ease-in-out`}
       >
@@ -127,7 +127,7 @@ const Header = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="text-2xl font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-2xl font-medium text-gray-700 dark:text-gray-300 hover:text-purple-700 dark:hover:text-purple-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

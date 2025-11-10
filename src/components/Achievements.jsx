@@ -64,7 +64,7 @@ const Achievements = () => {
     <section id="achievements" className="relative py-20 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50 dark:from-gray-900 dark:to-gray-800"></div>
         <div className="absolute inset-0 bg-grid-slate-900/10 dark:bg-grid-slate-400/10 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"></div>
       </div>
       
@@ -75,7 +75,7 @@ const Achievements = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 mb-4 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 rounded-full"
+            className="inline-block px-4 py-2 mb-4 text-sm font-medium text-purple-700 dark:text-purple-300 bg-purple-50/80 dark:bg-purple-900/30 rounded-full border border-purple-100/50 dark:border-purple-900/30"
           >
             Milestones & Recognitions
           </motion.span>
@@ -84,7 +84,7 @@ const Achievements = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-800 to-blue-700 dark:from-purple-400 dark:to-blue-400"
           >
             My Achievements
           </motion.h2>
@@ -110,10 +110,10 @@ const Achievements = () => {
             <motion.article
               key={index}
               variants={item}
-              className="group relative h-full flex flex-col bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-white/20 dark:border-gray-700/50"
+              className="group relative h-full flex flex-col bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-purple-100/50 dark:border-purple-900/30 hover:shadow-purple-500/10"
             >
               {/* Ribbon for date */}
-              <div className="absolute -right-10 top-6 w-32 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold py-1 px-4 transform rotate-45 text-center shadow-md">
+              <div className="absolute -right-10 top-6 w-32 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold py-1 px-4 transform rotate-45 text-center shadow-md">
                 {achievement.date}
               </div>
               
@@ -134,7 +134,7 @@ const Achievements = () => {
                       {achievement.tags.map((tag, i) => (
                         <motion.span 
                           key={i} 
-                          className="px-3 py-1.5 text-xs font-semibold rounded-full backdrop-blur-md bg-white/10 text-white border border-white/20"
+                          className="px-3 py-1.5 text-xs font-semibold rounded-full backdrop-blur-md bg-purple-500/20 text-purple-100 border border-purple-400/20"
                           initial={{ y: 10, opacity: 0 }}
                           whileInView={{ y: 0, opacity: 1 }}
                           transition={{ delay: 0.1 * i }}
@@ -148,7 +148,7 @@ const Achievements = () => {
                         href={achievement.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2.5 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-all hover:rotate-12 hover:scale-110 border border-white/20"
+                        className="p-2.5 bg-purple-500/20 backdrop-blur-md rounded-full text-white hover:bg-purple-500/30 transition-all hover:rotate-12 hover:scale-110 border border-purple-400/30"
                         aria-label="View details"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
@@ -173,10 +173,9 @@ const Achievements = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <motion.div 
-                      className={`p-3 rounded-xl backdrop-blur-sm ${achievement.icon.props.className.includes('text-yellow-400') ? 'bg-yellow-500/10' :
-                        achievement.icon.props.className.includes('text-blue-400') ? 'bg-blue-500/10' :
-                        achievement.icon.props.className.includes('text-green-500') ? 'bg-green-500/10' :
-                        'bg-purple-500/10'}`}
+                      className={`p-3 rounded-xl backdrop-blur-sm border border-purple-100/30 dark:border-purple-900/30 ${
+                        ['text-yellow-400', 'text-blue-400', 'text-green-500', 'text-purple-400']
+                          .find(c => achievement.icon.props.className.includes(c)) ? 'bg-purple-500/10' : 'bg-purple-500/10'}`}
                       whileHover={{ rotate: 10, scale: 1.1 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
@@ -197,7 +196,7 @@ const Achievements = () => {
                     href={achievement.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors group/button"
+                    className="mt-auto inline-flex items-center text-sm font-medium text-purple-700 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors group/button"
                     whileHover={{ x: 5 }}
                   >
                     View details

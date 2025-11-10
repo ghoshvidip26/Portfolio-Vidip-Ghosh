@@ -63,7 +63,7 @@ const Hero = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-purple-50/50 to-blue-50/50 dark:from-gray-900 dark:via-purple-900/10 dark:to-blue-900/5"></div>
         <div className="absolute inset-0 bg-grid-slate-900/10 dark:bg-grid-slate-400/10 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"></div>
       </div>
       <div className="container mx-auto px-6 relative z-10">
@@ -82,7 +82,7 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="mb-4"
             >
-              <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-full">
+              <span className="inline-block px-3 py-1 text-sm font-medium text-purple-700 dark:text-purple-300 bg-purple-50/80 dark:bg-purple-900/30 rounded-full border border-purple-100/50 dark:border-purple-800/30">
                 Hi there! I'm
               </span>
             </motion.div>
@@ -112,7 +112,7 @@ const Hero = () => {
                   className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300"
                 >
                   {`I'm a `}
-                  <span className="text-blue-600 dark:text-blue-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400">
                     {roles[currentRole]}
                   </span>
                 </motion.h2>
@@ -144,13 +144,13 @@ const Hero = () => {
                 href="https://ghoshvidip26.hackerresume.io/5b16ff8a-fda9-4904-b9f7-c8fd0d088cae"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                className="px-8 py-3 bg-gradient-to-r from-purple-700 to-blue-700 text-white font-medium rounded-lg hover:opacity-90 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-purple-500/20"
               >
                 View Resume
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                className="px-8 py-3 border-2 border-purple-200 dark:border-purple-900/50 text-purple-800 dark:text-purple-200 font-medium rounded-lg hover:bg-purple-50/50 dark:hover:bg-purple-900/20 transition-all"
               >
                 Contact Me
               </a>
@@ -169,7 +169,7 @@ const Hero = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-700 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-700 dark:text-gray-400 hover:text-purple-700 dark:hover:text-purple-400 transition-colors p-2 rounded-full hover:bg-purple-100/50 dark:hover:bg-purple-900/30"
                   aria-label={link.name}
                 >
                   <span className="sr-only">{link.name}</span>
@@ -197,42 +197,42 @@ const Hero = () => {
           >
             <div className="relative z-10 w-full p-1">
               {/* Glassmorphism Card */}
-              <div className="backdrop-blur-xl bg-white/10 dark:bg-gray-900/30 border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="backdrop-blur-xl bg-white/80 dark:bg-gray-900/30 border border-purple-200/80 dark:border-purple-900/30 rounded-2xl shadow-xl overflow-hidden dark:shadow-purple-900/20">
                 {/* Card Header */}
-                <div className="p-6 border-b border-white/10">
+                <div className="p-4 border-b border-gray-200/80 dark:border-white/10 bg-white/50 dark:bg-transparent">
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1.5">
                       <span className="w-3 h-3 rounded-full bg-red-400"></span>
                       <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                       <span className="w-3 h-3 rounded-full bg-green-400"></span>
                     </div>
-                    <div className="text-sm font-mono text-gray-600 dark:text-gray-400">
+                    <div className="text-sm font-mono text-gray-700 dark:text-gray-400 font-medium">
                       vidip-ghosh.jsx
                     </div>
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6">
+                <div className="p-6 bg-white/30 dark:bg-transparent">
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
-                      <span className="text-blue-400">const</span>
-                      <span className="text-purple-400">aboutMe</span>
-                      <span className="text-gray-400">=</span>
-                      <span className="text-yellow-300">&#123;</span>
+                      <span className="text-blue-600 dark:text-blue-400">const</span>
+                      <span className="text-purple-700 dark:text-purple-400 font-medium">aboutMe</span>
+                      <span className="text-gray-700 dark:text-gray-400">=</span>
+                      <span className="text-yellow-600 dark:text-yellow-300">&#123;</span>
                     </div>
 
                     <div className="ml-4 space-y-3">
                       <div className="flex">
-                        <span className="text-pink-400 w-24">name:</span>
-                        <span className="text-green-400">'Vidip Ghosh',</span>
+                        <span className="text-pink-600 dark:text-pink-400 w-24">name:</span>
+                        <span className="text-green-600 dark:text-green-400">'Vidip Ghosh',</span>
                       </div>
                       <div className="flex">
-                        <span className="text-pink-400 w-24">role:</span>
-                        <span className="text-green-400">'Full Stack Developer',</span>
+                        <span className="text-pink-600 dark:text-pink-400 w-24">role:</span>
+                        <span className="text-green-600 dark:text-green-400">'Full Stack Developer',</span>
                       </div>
                       <div className="space-y-4">
-                        <span className="text-pink-400">skills:</span>
+                        <span className="text-pink-600 dark:text-pink-400">skills:</span>
                         <div className="grid grid-cols-2 gap-3 pl-4">
                           {[
                             'Python', 'Node.js', 'Next.js', 'JavaScript',
@@ -248,7 +248,7 @@ const Hero = () => {
                             >
                               <div className="flex items-center space-x-2">
                                 <div className="w-2 h-2 rounded-full bg-blue-400 group-hover:bg-blue-500 transition-colors"></div>
-                                <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                                <span className="text-sm light:text-gray-600 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
                                   {skill}
                                 </span>
                               </div>
@@ -272,8 +272,8 @@ const Hero = () => {
                         />
                       </div>
                       <div>
-                        <div className="font-medium text-white">Vidip Ghosh</div>
-                        <div className="text-sm text-blue-300">@ghoshvidip26</div>
+                        <div className="font-medium dark:text-white light:text-gray-600">Vidip Ghosh</div>
+                        <div className="text-sm dark:text-blue-300 light:text-purple-600">@ghoshvidip26</div>
                       </div>
                     </div>
                   </div>
