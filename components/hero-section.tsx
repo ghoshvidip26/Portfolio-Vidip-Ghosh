@@ -32,7 +32,7 @@ export function HeroSection() {
                 Get in touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1TiXI3eMKaCWGxW05y8E9xp-BUhKIKV3E/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sDXuq8A9fxK4nJPIiESQJHKkcS8LJD8y/view?usp=drive_link"
                 target="_blank"
                 className="px-8 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-lg transition-colors"
               >
