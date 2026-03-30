@@ -3,7 +3,7 @@ const skillCategories = {
   Frontend: ["React", "Next.js", "JavaScript", "TypeScript"],
   Databases: ["PostgreSQL", "MongoDB", "Vector Databases"],
   "AI & ML": ["Generative AI", "RAG Systems", "Semantic Search"],
-  Tools: ["Git", "SQL/NoSQL", "Web3.js", "Blockchain"],
+  Tools: ["Git", "SQL/NoSQL", "Web3.js", "Blockchain", "Docker"],
 }
 
 export function SkillsSection() {
