@@ -132,7 +132,7 @@ export function HeroSection() {
                   <div className="pt-6 border-t border-white/10 flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20">
                       <Image
-                        src="/Vidip.jpg"
+                        src="/og.png"
                         width={40}
                         height={40}
                         alt="Vidip"
