@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL
-      ? `https://${process.env.NEXT_PUBLIC_SITE_URL}`
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}`
       : "http://localhost:3000",
   ),
   title: "Vidip Ghosh | Full-Stack Engineer | Software Developer",
