@@ -8,6 +8,11 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL
+      ? `https://${process.env.NEXT_PUBLIC_SITE_URL}`
+      : "http://localhost:3000",
+  ),
   title: "Vidip Ghosh | Full-Stack Engineer | Software Developer",
   description:
     "Software Engineer specializing in API-driven systems, Generative AI, RAG, and scalable web architecture. Seeking SDE-1, Backend, and Full-Stack roles.",
