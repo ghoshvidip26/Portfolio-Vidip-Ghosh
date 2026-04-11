@@ -137,6 +137,24 @@ const projectsList = [
       "VectorDB",
     ],
   },
+  {
+    id: 14,
+    title: "Scalable URL Shortener",
+    description:
+      "High-performance URL shortener with Redis caching, rate limiting, and optimized redirects. Built for scale with Node.js, PostgreSQL, and Docker.",
+    tags: ["Node.js", "PostgreSQL", "Redis", "Docker", "TypeScript"],
+    link: "https://github.com/ghoshvidip26/URL-Shortener-Site",
+    status: "In Progress"
+  },
+  {
+    id: 15,
+    title: "PromptRL",
+    description:
+      "A reinforcement learning system that learns the most cost-efficient way to use LLMs by dynamically choosing prompts, reasoning depth, and personas. Implements Q-learning with LLM-as-a-judge evaluation and cost-aware reward optimization.",
+    tags: ["Python", "FastAPI", "Reinforcement Learning", "OpenAI SDK", "Docker", "Hugging Face"],
+    link: "https://github.com/ghoshvidip26/promptrl",
+    status: "In Progress"
+  }
 ];
 
 export function ProjectsSection() {
@@ -166,7 +184,7 @@ export function ProjectsSection() {
                 <p className="text-slate-400 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 pt-2">
+                <div className="flex flex-wrap items-center gap-2 pt-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -175,6 +193,11 @@ export function ProjectsSection() {
                       {tag}
                     </span>
                   ))}
+                  {project?.status === "In Progress" && (
+                    <span className="text-xs px-2 py-1 bg-cyan-500/10 border border-cyan-500/50 text-cyan-400 rounded">
+                      In Progress
+                    </span>
+                  )}
                 </div>
               </div>
             </a>
