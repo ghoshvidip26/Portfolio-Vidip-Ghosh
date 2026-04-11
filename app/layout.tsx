@@ -12,33 +12,30 @@ export const metadata: Metadata = {
   description:
     "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
   icons: {
-    icon: [
-      {
-        url: "/Vidip.jpg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: "/favicon.ico",
     apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Vidip Ghosh - Backend & Full-Stack Engineer",
-    description: "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
+    description:
+      "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
     images: [
       {
         url: "/Vidip.jpg",
-        type: "image/svg+xml",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
       },
     ],
+    type: "website",
   },
+
   twitter: {
+    card: "summary_large_image",
     title: "Vidip Ghosh - Backend & Full-Stack Engineer",
-    description: "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
-    images: [
-      {
-        url: "/Vidip.jpg",
-        type: "image/svg+xml",
-      },
-    ],
+    description:
+      "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
+    images: ["/Vidip.jpg"], // simpler format works
   },
 };
 
