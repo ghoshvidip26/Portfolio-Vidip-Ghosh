@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Vidip Ghosh | Full-Stack Engineer | Software Developer",
     description:
       "Software Engineer specializing in API-driven systems, Generative AI, RAG, and scalable web architecture. Seeking SDE-1, Backend, and Full-Stack roles.",
-    images: ["/og.png"], // simpler format works
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og.png`],
   },
 };
 
