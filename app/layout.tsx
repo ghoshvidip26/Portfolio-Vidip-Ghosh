@@ -26,10 +26,10 @@ export const metadata: Metadata = {
       "Software Engineer specializing in API-driven systems, Generative AI, RAG, and scalable web architecture. Seeking SDE-1, Backend, and Full-Stack roles.",
     images: [
       {
-        url: "/og-main.jpg",
-        width: 1024,
-        height: 1024,
-        type: "image/jpeg",
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
       },
     ],
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Vidip Ghosh | Full-Stack Engineer | Software Developer",
     description:
       "Software Engineer specializing in API-driven systems, Generative AI, RAG, and scalable web architecture. Seeking SDE-1, Backend, and Full-Stack roles.",
-    images: ["/og-main.jpg"],
+    images: ["/og.png"],
   },
 };
 
