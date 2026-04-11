@@ -20,6 +20,26 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  openGraph: {
+    title: "Vidip Ghosh - Backend & Full-Stack Engineer",
+    description: "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
+    images: [
+      {
+        url: "/Vidip.jpg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
+  twitter: {
+    title: "Vidip Ghosh - Backend & Full-Stack Engineer",
+    description: "Software Engineer specializing in API-driven systems, Generative AI, RAG applications, and scalable web architecture. Seeking SDE-1 / Backend / Full-Stack roles.",
+    images: [
+      {
+        url: "/Vidip.jpg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
