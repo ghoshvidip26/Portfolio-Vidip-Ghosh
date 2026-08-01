@@ -50,6 +50,18 @@ const achievementsList = [
     description: "Selected as Top-10 Finalist",
   },
   {
+    icon: "✨",
+    title: "Nasiko Buildathon Bengaluru",
+    category: "Top-10 Finalist",
+    description: "Selected as Top-10 Finalist",
+  },
+  {
+    icon: <FaMedal className="text-blue-400 text-2xl" />,
+    title: "Webcmd Hackathon (Agentic payment edition)",
+    category: "2nd Runner-Up",
+    description: "Secured 2nd Runner-Up position",
+  },
+  {
     title: "LinkedIn Skill Badge",
     description: "Validated skills and expertise in web development",
     icon: <FaCertificate className="text-blue-400 text-2xl" />,
