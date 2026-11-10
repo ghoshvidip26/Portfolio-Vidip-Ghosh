@@ -75,6 +75,12 @@ const achievementsList = [
     link: "https://google.qwiklabs.com",
     tags: ["Cloud", "Google"],
   },
+  {
+    title: "GirlScript Summer of Code",
+    description: "Secured a global Rank 68 with 29 pull requests successfully merged",
+    icon: <FaCertificate className="text-blue-400 text-2xl" />,
+    tags: ["Certification", "Skills"],
+  }
 ];
 
 export function AchievementsSection() {

@@ -40,6 +40,17 @@ export function AboutSection() {
       ],
       icon: <Target size={20} />,
     },
+    {
+      title: "Junior Mobile Application Developer",
+      company: "Aforro",
+      period: "Jul 2026 – Oct 2026",
+      type: "Full-time",
+      points: [
+        "Delivered 6 rider order flows (pickup, delivery, returns, replacements, cancellations, cash collection) via REST APIs, with real-time Firebase FCM/WebSocket alerts for 4 assignment flows, status updates, cash deposits, and live location.",
+        "Shipped rider operations with backend APIs: 9-step onboarding before first shift, COD collection, UPI QR generation, wallet/earnings, shift management, and a 100 m geofence gating “I’ve Arrived” (fused-location tracking, background geofencing, Google Maps routing).",
+        "Owned the Sales app frontend end-to-end across 10 feature areas (authentication, Cashfree payments, eSign, GSTIN, document uploads, surveys, store logging, WebView PDF rendering, store visits, check-ins), allowing check-ins only within 50 m of a store.",
+      ]
+    }
   ];
 
   return (
@@ -49,7 +60,7 @@ export function AboutSection() {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -61,7 +72,7 @@ export function AboutSection() {
 
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Bio Card */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-7 space-y-6"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +82,7 @@ export function AboutSection() {
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <User size={120} className="text-cyan-500" />
               </div>
-              
+
               <div className="space-y-6 text-slate-300 leading-relaxed relative z-10">
                 <p>
                   I'm a Software Engineer specializing in backend and full-stack
@@ -85,8 +96,8 @@ export function AboutSection() {
                   vector databases, and expose insights through clean APIs.
                 </p>
                 <p>
-                  I thrive in fast-moving environments where I can iterate quickly 
-                  while maintaining high engineering standards for scalability and 
+                  I thrive in fast-moving environments where I can iterate quickly
+                  while maintaining high engineering standards for scalability and
                   reliability.
                 </p>
               </div>
@@ -116,59 +127,61 @@ export function AboutSection() {
           </motion.div>
 
           {/* Timeline Experience */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-5"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl h-full">
-              <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
+            <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl h-full flex flex-col lg:max-h-[620px]">
+              <h3 className="text-xl font-bold mb-8 flex items-center gap-3 shrink-0">
                 <Calendar className="text-cyan-500" size={24} />
                 Experience
               </h3>
 
-              <div className="space-y-12 relative">
-                {/* Vertical Line */}
-                <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-slate-800" />
+              <div className="overflow-y-auto pr-2 -mr-2 flex-1 min-h-0 custom-scrollbar">
+                <div className="space-y-12 relative pb-2">
+                  {/* Vertical Line */}
+                  <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-slate-800" />
 
-                {experiences.map((exp, index) => (
-                  <motion.div 
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="relative pl-10"
-                  >
-                    {/* Dot */}
-                    <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center z-10 shadow-[0_0_10px_rgba(6,182,212,0.5)]">
-                      <div className="w-2 h-2 rounded-full bg-cyan-500" />
-                    </div>
+                  {experiences.map((exp, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.2 }}
+                      className="relative pl-10"
+                    >
+                      {/* Dot */}
+                      <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center z-10 shadow-[0_0_10px_rgba(6,182,212,0.5)]">
+                        <div className="w-2 h-2 rounded-full bg-cyan-500" />
+                      </div>
 
-                    <div className="space-y-2">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-500/80 bg-cyan-500/10 px-2 py-0.5 rounded">
-                        {exp.period}
-                      </span>
-                      <h4 className="text-lg font-bold text-slate-100">{exp.title}</h4>
-                      <p className="text-sm text-slate-400 font-medium">{exp.company} · {exp.type}</p>
-                      
-                      {exp.description && (
-                        <p className="text-xs text-slate-500 leading-relaxed">{exp.description}</p>
-                      )}
-                      
-                      {exp.points && (
-                        <ul className="mt-3 space-y-2">
-                          {exp.points.map((point, i) => (
-                            <li key={i} className="text-[11px] text-slate-500 flex items-start gap-2">
-                              <span className="w-1 h-1 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </motion.div>
-                ))}
+                      <div className="space-y-2">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-500/80 bg-cyan-500/10 px-2 py-0.5 rounded">
+                          {exp.period}
+                        </span>
+                        <h4 className="text-lg font-bold text-slate-100">{exp.title}</h4>
+                        <p className="text-sm text-slate-400 font-medium">{exp.company} · {exp.type}</p>
+
+                        {exp.description && (
+                          <p className="text-xs text-slate-500 leading-relaxed">{exp.description}</p>
+                        )}
+
+                        {exp.points && (
+                          <ul className="mt-3 space-y-2">
+                            {exp.points.map((point, i) => (
+                              <li key={i} className="text-[11px] text-slate-500 flex items-start gap-2">
+                                <span className="w-1 h-1 rounded-full bg-cyan-500 mt-1.5 shrink-0" />
+                                {point}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

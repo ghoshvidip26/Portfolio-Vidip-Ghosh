@@ -154,6 +154,24 @@ const projectsList = [
     tags: ["Python", "FastAPI", "Reinforcement Learning", "OpenAI SDK", "Docker", "Hugging Face"],
     link: "https://github.com/ghoshvidip26/promptrl",
     status: "In Progress"
+  },
+  {
+    id: 16,
+    title: "AegisSRE",
+    description:
+      "Multi-agent incident triage and remediation platform with a reusable TypeScript SDK, pluggable Runbook Registry, and a sandboxed runtime for safe, policy-driven fixes.",
+    tags: ["TypeScript", "Next.js", "Mastra AI", "Qdrant", "Enkrypt AI", "Node.js"],
+    link: "https://github.com/ghoshvidip26/AegisSRE-Signoz",
+    status: "In Progress"
+  },
+  {
+    id: 17,
+    title: "RoleSync",
+    description:
+      "AI career platform that tailors resumes with a RAG pipeline and drafts personalized recruiter outreach with human approval and SMTP delivery.",
+    tags: ["Python", "FastAPI", "FAISS", "LangChain"],
+    link: "https://github.com/ghoshvidip26/RoleSync",
+    status: "In Progress"
   }
 ];
 
